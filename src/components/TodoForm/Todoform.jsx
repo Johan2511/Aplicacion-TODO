@@ -9,23 +9,23 @@ function TodoForm () {
         setOpenModal,
     } = React.useContext(TodoContext)
 
-    const onChange = (e) => {
-        setNewTodoValue( e.target.value);
+    const onChange = (event) => {
+        setNewTodoValue( event.target.value);
     };
 
     const onCancel = () => {
 
         setOpenModal(false);
     };
-    const onSubmit = (e) => {
-        e.prevenDefault();
+    const onSubmit = (event) => {
+        event.prevenDefault();
         addTodo (newTodoValue);
         setOpenModal(false);   
     };
 
     return (
         <form onSubmit={onSubmit}>
-            <label htmlFor="">...</label>
+            <label>...</label>
             <textarea
             value={newTodoValue}
             onChange ={onChange}

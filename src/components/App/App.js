@@ -9,8 +9,6 @@ import { AppUI } from "./appUI";
 //   { text: 'Conseguir el diploma de DigitalHouse', completed: false},
 // ]
 
-
-
 function App() {
  
   return (

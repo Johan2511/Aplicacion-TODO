@@ -3,10 +3,10 @@ import { TodoContext } from "../TodoContext/TodoContext";
 import {TodoCounter} from "../TodoCounter/TodoCounter";
 import {TodoSearch} from "../TodoSearch/TodoSearch";
 import {TodoList} from "../TodoList/TodoList";
-import {TodoItems} from "../TodoItems/TodoItems";
+import {TodoItem} from "../TodoItem/TodoItem";
+import { TodoForm } from "../TodoForm/Todoform";
 import {CreateTodoButton} from "../CreateTodoButton/CreateTodoButton";
 import {Modal} from "../Modal/Modal";
-import { TodoForm } from "../TodoForm/Todoform";
 
 function AppUI() {
   const {
@@ -30,7 +30,7 @@ function AppUI() {
         {(!loading && !searchedTodos.length) && <p>¡Crea tu primer TODO!</p>}
         
         {searchedTodos.map(todo => (
-          <TodoItems
+          <TodoItem
             key={todo.text}
             text={todo.text}
             completed={todo.completed}
@@ -42,7 +42,7 @@ function AppUI() {
       
       {!!openModal && (
         <Modal>
-        <TodoForm></TodoForm>
+        <TodoForm />
         </Modal>
       )}
 
