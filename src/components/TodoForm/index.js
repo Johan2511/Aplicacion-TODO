@@ -1,5 +1,5 @@
 import React from "react";
-import { TodoContext } from "../TodoContext/TodoContext";
+import { TodoContext } from "../TodoContext";
 
 function TodoForm () {
     const[newTodoValue, setNewTodoValue] = React.useState('');
